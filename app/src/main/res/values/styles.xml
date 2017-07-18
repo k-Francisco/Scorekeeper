@@ -13,4 +13,5 @@
         <item name="android:tint">@color/colorPrimary</item>
     </style>
 
+    <style name="CustomTheme" parent="Theme.AppCompat"/>
 </resources>
