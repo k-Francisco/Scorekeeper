@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTeam1 = new ScoreFragment();
-        mTeam2 = new ScoreFragment();
+        mTeam1 = new ScoreFragment(getString(R.string.team_name_1));
+        mTeam2 = new ScoreFragment(getString(R.string.team_name_2));
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container1, mTeam1)
