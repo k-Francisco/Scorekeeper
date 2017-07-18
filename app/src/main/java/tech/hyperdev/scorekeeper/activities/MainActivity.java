@@ -19,13 +19,15 @@ public class MainActivity extends AppCompatActivity {
         mTeam1 = new ScoreFragment(getString(R.string.team_name_1));
         mTeam2 = new ScoreFragment(getString(R.string.team_name_2));
 
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.container1, mTeam1)
-                .commit();
+        if(savedInstanceState == null){
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.container1, mTeam1)
+                    .commit();
 
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.container2, mTeam2)
-                .commit();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.container2, mTeam2)
+                    .commit();
+        }
 
     }
 }
